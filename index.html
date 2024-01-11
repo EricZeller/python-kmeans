@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Means in Python | Eric</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            background-color: #34495e;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ecf0f1;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            margin: 0 0.5em;
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 2em;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .code-box {
+            position: relative;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        /* Stil für den "Copy"-Button */
+        .copy-button {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>K-Means in Python by Eric</h1>
+    </header>
+
+    <nav>
+        <a href="https://ericzeller.github.io">Github Website</a>
+    </nav>
+
+    <section id="tipps">
+        <h2>Installation</h2>
+        <p>Folgenden Befehl in der Commandline/PowerShell eingeben: (sofern die neueste Version Python installiert ist,
+            sonst <a href="https://www.python.org/downloads/">hier</a> downloaden)</p>
+        <div class="code-box">
+            <button class="copy-button" onclick="copyCode()">Copy</button>
+            <pre>
+              <code id="code-snippet">
+                py -m pip install numpy pandas matplotlib scikit-learn scipy
+              </code>
+            </pre>
+        </div>
+    </section>
+
+    <section>
+        <h2>Code ausführen</h2>
+        <p>Nach der Installation kann man den Code ausführen, welchen man <a
+                href="https://github.com/ericzeller/python-kmeans/">hier</a> finden kann.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024. Alle Rechte vorbehalten.</p>
+    </footer>
+    <script>
+        // JavaScript-Funktion zum Kopieren des Codes
+        function copyCode() {
+            const codeSnippet = document.getElementById('code-snippet');
+            const textArea = document.createElement('textarea');
+            textArea.value = codeSnippet.textContent;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            alert('Code wurde kopiert!');
+        }
+    </script>
+</body>
+
+</html>

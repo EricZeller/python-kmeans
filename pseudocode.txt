@@ -1,0 +1,17 @@
+FUNKTION user_input_data()
+	AUSGABE "Geben Sie die Anzahl der Datenpunkte ein: "
+	GZ num_samples = EINGABE
+	ARRAY daten = []
+	ARRAY labels = []
+	
+		FÜR i, i = num_samples
+			AUSGABE "Geben Sie das Label für den Datenpunkt i+1 ein: "
+			TEXT label = EINGABE
+			AUSGABE "Geben Sie den Wert für Feature 1 vom Datenpunkt i+1 ein: "
+			FKZ feature1 = EINGABE
+			AUSGABE "Geben Sie den Wert für Feature 2 vom Datenpunkt i+1 ein: "
+			FKZ feature2 = EINGABE
+
+			daten[i] = [feature1, feature2]
+			labels[i] = label
+		RÜCKGABE daten, labels
